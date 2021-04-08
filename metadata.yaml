@@ -1,6 +1,8 @@
 homepage: "https://www.simoahava.com/"
 versions:
   # Latest version
+  - sha: 296d3f36d4b5dafad81ecc5bdc93fe1effd05e82
+    changeNotes: Fix the default value to page_location in the URL Source dropdown.
+  # Older versions
   - sha: db7ae19d42026782d84e67cd8d124e45584d9adb
     changeNotes: Initial release.
-  # Older versions
