@@ -11,6 +11,7 @@ ___INFO___
 {
   "type": "MACRO",
   "id": "cvt_temp_public_id",
+  "__wm": "VGVtcGxhdGUtQXV0aG9yX1VSTFBhcnNlci1TaW1vLUFoYXZh",
   "version": 1,
   "securityGroups": [],
   "displayName": "URL Parser",
@@ -38,7 +39,7 @@ ___TEMPLATE_PARAMETERS___
     ],
     "simpleValueType": true,
     "help": "Choose \u003cstrong\u003epage_location\u003c/strong\u003e to use the respective key from the Event Data object, or provide a variable that returns a valid URL string.",
-    "defaultValue": "page_location"
+    "defaultValue": "default_page_location"
   },
   {
     "type": "SELECT",
