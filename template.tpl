@@ -145,7 +145,7 @@ switch (data.componentType) {
   case 'protocol':
     return parsedUrl.protocol;
   case 'query':
-    return data.queryKey ? decodeUriComponent(parsedUrl.searchParams[data.queryKey]) : parsedUrl.search;
+    return data.queryKey && parsedUrl.searchParams[data.queryKey] ? decodeUriComponent(parsedUrl.searchParams[data.queryKey]) : parsedUrl.search;
 }
 
 
