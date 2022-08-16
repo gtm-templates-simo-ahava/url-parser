@@ -15,7 +15,9 @@ ___INFO___
   "version": 1,
   "securityGroups": [],
   "displayName": "URL Parser",
-  "categories": ["UTILITY"],
+  "categories": [
+    "UTILITY"
+  ],
   "description": "Parse any URL string for its constituent parts.",
   "containerContexts": [
     "SERVER"
@@ -145,7 +147,11 @@ switch (data.componentType) {
   case 'protocol':
     return parsedUrl.protocol;
   case 'query':
-    return data.queryKey && parsedUrl.searchParams[data.queryKey] ? decodeUriComponent(parsedUrl.searchParams[data.queryKey]) : parsedUrl.search;
+    if (data.queryKey) {
+      return parsedUrl.searchParams[data.queryKey] ? decodeUriComponent(parsedUrl.searchParams[data.queryKey]) : undefined;
+    } else {
+      return parsedUrl.search;
+    }
 }
 
 
