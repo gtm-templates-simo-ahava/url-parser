@@ -1,9 +1,11 @@
 homepage: "https://www.simoahava.com/"
 versions:
   # Latest version
+  - sha: f7fcca3e54e4ef238b6075e01da08d4ff7d51d99
+    changeNotes: Fix Query Key to return undefined if no match is made.
+  # Older versions
   - sha: 4fc02e1ad1849495443f400415ba3dc3dd0d8799
     changeNotes: Add reference check for query parameter.
-  # Older versions
   - sha: 296d3f36d4b5dafad81ecc5bdc93fe1effd05e82
     changeNotes: Fix the default value to page_location in the URL Source dropdown.
   - sha: db7ae19d42026782d84e67cd8d124e45584d9adb
