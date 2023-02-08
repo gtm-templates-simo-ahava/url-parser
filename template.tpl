@@ -80,6 +80,10 @@ ___TEMPLATE_PARAMETERS___
       {
         "value": "query",
         "displayValue": "Query"
+      },
+      {
+        "value": "etld1",
+        "displayValue": "Effective top-level domain + 1"
       }
     ],
     "simpleValueType": true,
@@ -119,6 +123,7 @@ ___TEMPLATE_PARAMETERS___
 ___SANDBOXED_JS_FOR_SERVER___
 
 // Enter your template code here.
+const computeEffectiveTldPlusOne = require('computeEffectiveTldPlusOne');
 const decodeUri = require('decodeUri');
 const decodeUriComponent = require('decodeUriComponent');
 const getEventData = require('getEventData');
@@ -146,6 +151,8 @@ switch (data.componentType) {
     return parsedUrl.port;
   case 'protocol':
     return parsedUrl.protocol;
+  case 'etld1':
+    return computeEffectiveTldPlusOne(parsedUrl.hostname);
   case 'query':
     if (data.queryKey) {
       return parsedUrl.searchParams[data.queryKey] ? decodeUriComponent(parsedUrl.searchParams[data.queryKey]) : undefined;

@@ -1,9 +1,11 @@
 homepage: "https://www.simoahava.com/"
 versions:
   # Latest version
+  - sha: 007e5bd5d516c3011645bc108461e04edb2bfa40
+    changeNotes: Add option to compute etld+1.
+  # Older versions
   - sha: f7fcca3e54e4ef238b6075e01da08d4ff7d51d99
     changeNotes: Fix Query Key to return undefined if no match is made.
-  # Older versions
   - sha: 4fc02e1ad1849495443f400415ba3dc3dd0d8799
     changeNotes: Add reference check for query parameter.
   - sha: 296d3f36d4b5dafad81ecc5bdc93fe1effd05e82
